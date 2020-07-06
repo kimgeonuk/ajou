@@ -84,6 +84,7 @@ void loop() {
   client.println("</html>");
 
   delay(1);
+  client.stop();
   Serial.println("Client disconnected!!");
   Serial.println();
 }
