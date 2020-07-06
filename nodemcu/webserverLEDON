@@ -2,8 +2,8 @@
 
 #define ledPin D2
 
-const char* ssid = "makeitnow";
-const char* password = "19880724";
+const char* ssid = "******";
+const char* password = "******";
 
 WiFiServer server(80);
 
@@ -67,6 +67,7 @@ void loop() {
 
   client.println("HTTP/1.1 200 OK");
   client.println("Content-Type : text/html");
+  client.println("Connection: close");
   client.println("");
   client.println("<!DOCTYPE HTML>");
   client.println("<html>");
