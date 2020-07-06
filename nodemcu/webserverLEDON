@@ -53,8 +53,6 @@ void loop() {
 
   int value=LOW;
   //indexOf(val) 없으면 -1을 리턴
-
-  Serial.print(request.indexOf("/LED=ON"));
   if(request.indexOf("/LED=ON") != -1){
     digitalWrite(ledPin, HIGH);
     value = HIGH;
