@@ -2,8 +2,8 @@
 
 #define ledPin D2
 
-const char* ssid = "AndroidHotspot7748";
-const char* password = "1234567890";
+const char* ssid = "*******";
+const char* password = "*****";
 
 WiFiServer server(80);
 
@@ -37,7 +37,6 @@ void setup() {
 }
 
 void loop() {
-
   WiFiClient client = server.available();
   if(!client){
     return;
@@ -71,7 +70,7 @@ void loop() {
   client.println("<head></head>");
   client.println("<body>");
   client.println("<div style='width:100%; height:300px; line-height:300px; margin: 0 auto; font-size:4em; font-weight:bolder; text-align:center;'>");
-  client.println("LED is turned ");
+  client.println("LED is turned");
 
   if(value) {
     client.print("On");
