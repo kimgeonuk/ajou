@@ -2,8 +2,8 @@
 
 #define ledPin D2
 
-const char* ssid = "******";
-const char* password = "******";
+const char* ssid = "AndroidHotspot7748";
+const char* password = "1234567890";
 
 WiFiServer server(80);
 
@@ -53,12 +53,12 @@ void loop() {
 
   int value = LOW;
   if(request.indexOf("/ledOn") != -1) {
-    digitalWrite(rLed, HIGH);
+    digitalWrite(ledPin, HIGH);
     value = HIGH;
   }
 
   if(request.indexOf("/ledOff") != -1) {
-    digitalWrite(rLed, LOW);
+    digitalWrite(ledPin, LOW);
     value = LOW;
   }
 
